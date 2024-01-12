@@ -21,13 +21,13 @@ namespace MBTestTask1.Shapes
 		/// </summary>
 		public double ThirdSide { get; set; }
 
-        /// <summary>
-        /// Конструктор класса треугольника
-        /// </summary>
-        /// <param name="firstSide">Первая сторона треугольника</param>
-        /// <param name="secondSide">Вторая сторона треугольника</param>
-        /// <param name="thirdSide">Третья сторона треугольника</param>
-        public Triangle(double firstSide, double secondSide, double thirdSide)
+		/// <summary>
+		/// Конструктор класса треугольника
+		/// </summary>
+		/// <param name="firstSide">Первая сторона треугольника</param>
+		/// <param name="secondSide">Вторая сторона треугольника</param>
+		/// <param name="thirdSide">Третья сторона треугольника</param>
+		public Triangle(double firstSide, double secondSide, double thirdSide)
 		{
 			FirstSide = firstSide;
 			SecondSide = secondSide;
@@ -38,15 +38,15 @@ namespace MBTestTask1.Shapes
 		/// Посчитать площадь треугольника по трём сторонам
 		/// </summary>
 		/// <returns>Площадь треугольника</returns>
-        protected override double CalculateSquare()
-        {
+		protected override double CalculateSquare()
+		{
 			CheckForExceptions();
 
 			var halfPerimeter = (FirstSide + SecondSide + ThirdSide) / 2;
 
 			return Math.Sqrt(halfPerimeter * (halfPerimeter - FirstSide)
 				* (halfPerimeter - SecondSide) * (halfPerimeter - ThirdSide));
-        }
+		}
 
 		/// <summary>
 		/// Проверить, что треугольник является прямоугольным
@@ -68,7 +68,7 @@ namespace MBTestTask1.Shapes
 		/// <exception cref="Exception">Если неравенство треугольника не выполняется</exception>
 		protected override void CheckForExceptions()
 		{
-            if (FirstSide < 0 || SecondSide < 0 || ThirdSide < 0)
+			if (FirstSide < 0 || SecondSide < 0 || ThirdSide < 0)
 				throw new ArgumentOutOfRangeException("A side of the triangle is not allowed to be negative");
 
 			if (FirstSide + SecondSide < ThirdSide ||
@@ -77,6 +77,6 @@ namespace MBTestTask1.Shapes
 				throw new Exception("Triangle inequality is not reached");
 		}
 
-    }
+	}
 }
 
