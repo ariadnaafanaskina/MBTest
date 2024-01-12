@@ -6,12 +6,12 @@ namespace MBTestTask1.Tests
     /// <summary>
     /// Тесты для треугольника
     /// </summary>
-	public class TriangleTests
+    public class TriangleTests
     {
         /// <summary>
         /// Тест для случаев: хотя бы одна сторона треугольника - отрицательная или все отрицательные
         /// </summary>
-		[Fact]
+        [Fact]
         public void TringleSideIsNegativeTest()
         {
             var triangleOne = new Triangle(-7, 4, 5);
@@ -34,8 +34,8 @@ namespace MBTestTask1.Tests
         /// <summary>
         /// Тест для случая: неравенство треугольника не выполняется
         /// </summary>
-		[Fact]
-        public void TriangleInequalityIsNotReached()
+        [Fact]
+        public void TriangleInequalityIsNotReachedTest()
         {
             var triangle = new Triangle(1, 0, 0);
             var ex = Assert.Throws<Exception>(() => triangle.Square);
@@ -45,8 +45,8 @@ namespace MBTestTask1.Tests
         /// <summary>
         /// Проверка корректности рассчёта площади треугольника по трём сторонам
         /// </summary>
-		[Fact]
-        public void CalculateTriangleSquare()
+        [Fact]
+        public void CalculateTriangleSquareTest()
         {
             const double expectedResult = 13.416407864998739;
 
@@ -70,7 +70,7 @@ namespace MBTestTask1.Tests
         /// Проверка корректности рассчёта площади прямоугольного треугольника по трём сторонам
         /// </summary>
         [Fact]
-        public void CalculateRightTriangleSquare()
+        public void CalculateRightTriangleSquareTest()
         {
             const double expectedResult = 6;
 
@@ -91,4 +91,3 @@ namespace MBTestTask1.Tests
         }
     }
 }
-
