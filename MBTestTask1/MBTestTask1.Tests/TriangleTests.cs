@@ -43,7 +43,7 @@ namespace MBTestTask1.Tests
         }
 
         /// <summary>
-        /// Проверка корректности рассчёта площади треугольника по трём сторонам
+        /// Проверка корректности расчёта площади треугольника по трём сторонам
         /// </summary>
         [Fact]
         public void CalculateTriangleSquareTest()
@@ -67,7 +67,7 @@ namespace MBTestTask1.Tests
         }
 
         /// <summary>
-        /// Проверка корректности рассчёта площади прямоугольного треугольника по трём сторонам
+        /// Проверка корректности расчёта площади прямоугольного треугольника по трём сторонам
         /// </summary>
         [Fact]
         public void CalculateRightTriangleSquareTest()
